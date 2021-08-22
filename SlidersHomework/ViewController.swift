@@ -27,15 +27,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func setRedColour() {
-        redLabel.text = String(redSlider.value)
+        let roundRedValue = round(redSlider.value * 100) / 100.0
+        redLabel.text = String(roundRedValue)
     }
     
     @IBAction func setGreenColour() {
-        greenLabel.text = String(greenSlider.value)
+        let roundGreenValue = round(greenSlider.value * 100) / 100.0
+        greenLabel.text = String(roundGreenValue)
     }
     
     @IBAction func setBlueColour() {
-        blueLabel.text = String(blueSlider.value)
+        let roundBlueValue = round(blueSlider.value * 100) / 100.0
+        blueLabel.text = String(roundBlueValue)
     }
 }
 
