@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var blueSlider: UISlider!
     
     
-    @IBOutlet weak var redValue: UILabel!
+    @IBOutlet weak var redLabel: UILabel!
     @IBOutlet weak var greenLabel: UILabel!
     @IBOutlet weak var blueLabel: UILabel!
     
@@ -26,6 +26,16 @@ class ViewController: UIViewController {
         colourView.layer.cornerRadius = 15
     }
 
-
+    @IBAction func setRedColour() {
+        redLabel.text = String(redSlider.value)
+    }
+    
+    @IBAction func setGreenColour() {
+        greenLabel.text = String(greenSlider.value)
+    }
+    
+    @IBAction func setBlueColour() {
+        blueLabel.text = String(blueSlider.value)
+    }
 }
 
